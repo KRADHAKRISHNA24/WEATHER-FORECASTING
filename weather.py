@@ -4,14 +4,14 @@ import pandas as pd
 import pickle
 
 #Loading the file
-df=pd.read_csv(r"C:\Users\G0d\Downloads\archive (5)\weather_classification_data.csv")
+df=pd.read_csv(r"weather_classification_data.csv")
 
 #Logo and Title
-st.image(r"C:\Users\G0d\Pictures\inno logo png.png")
+st.image(r"inno logo png.png")
 st.title("Weather ForeCast")
 
 #Loading Pickle file
-model = pickle.load(open(r"C:\Users\G0d\Machine Learning\weather.pkl","rb"))
+model = pickle.load(open(r"weather.pkl","rb"))
 
 
 #Columns
@@ -47,16 +47,16 @@ if st.button("Predict the Weather Type"):
     if predicted=="Rainy":
         st.write("Hey it's Rainy")
         st.write("Better to carry an Umbrella")
-        st.image(r"C:\Users\G0d\Downloads\Rainy.png")
+        st.image(r"Rainy.png")
     elif predicted=="Cloudy":
         st.write("oh it's Cloudy")
         st.write("Better to stay at HOME")
-        st.image(r"C:\Users\G0d\Pictures\cloudy png.webp")
+        st.image(r"cloudy png.webp")
     elif predicted=="Sunny":
         st.write("Hey Hey it's Sunny")
         st.write("Lets Play")
-        st.image(r"C:\Users\G0d\Downloads\sunny_image.png")
+        st.image(r"sunny_image.png")
     elif predicted=="Snowy":
         st.write("Hey it's Snowy")
         st.write("lets make Snowman")
-        st.image(r"C:\Users\G0d\Pictures\snowman.webp")
+        st.image(r"snowman.webp")
